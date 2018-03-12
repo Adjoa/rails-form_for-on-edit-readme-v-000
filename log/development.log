@@ -817,3 +817,14 @@ Processing by PostsController#show as HTML
   [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 181ms (Views: 156.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/1" for 72.252.198.128 at 2018-03-12 21:00:25 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ccnp9kgC3JJKRJcyVppU1ZJvZqrpXCAN+LZANo4pge+6XPlkvxneBplnmPG+RZMvVWQ6xwlPK9KK8j/k8AP1wg==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"Nothing to see here."}, "commit"=>"Update Post", "id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+RuntimeError ({"utf8"=>"✓", "_method"=>"patch", "authenticity_token"=>"ccnp9kgC3JJKRJcyVppU1ZJvZqrpXCAN+LZANo4pge+6XPlkvxneBplnmPG+RZMvVWQ6xwlPK9KK8j/k8AP1wg==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"Nothing to see here."}, "commit"=>"Update Post", "controller"=>"posts", "action"=>"update", "id"=>"1"}):
+  app/controllers/posts_controller.rb:27:in `update'
+
+
